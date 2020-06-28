@@ -1,0 +1,13 @@
+runtime: python27
+api_version: 1
+threadsafe: True
+
+handlers:
+  - url: /static
+    static_dir: static_dir
+  - url: /.*
+    script: main.app
+
+libraries:
+  - name: ssl
+    version: latest
