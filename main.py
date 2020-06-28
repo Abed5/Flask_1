@@ -1,12 +1,12 @@
-#Importing Flask module and creating a Flask web server from Flask module
-from flask import Flask
+#Importing Flask and render_template modules and creating a Flask web server from Flask module
+from flask import Flask, render_template
 #This current file will represent my web application
 app = Flask(__name__)
 #Default page
 @app.route("/")
 #when user goes to my website, activate function below
 def home():
-    return "Hello, World!"
+    return render_template("home.html")
 
 
 @app.route("/salvador")
